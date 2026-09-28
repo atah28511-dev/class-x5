@@ -11,369 +11,87 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #e8f8ff, white);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #dff6ff, #ffffff);
     color: #234;
 }
 
-header {
-    text-align: center;
-    padding: 70px 20px;
-    background: linear-gradient(135deg, #dff6ff, white);
+.container {
+    width: 90%;
+    max-width: 700px;
 }
 
-header h1 {
-    color: #38a9df;
-    font-size: 42px;
-    margin: 0 0 10px;
+.logo {
+    font-size: 70px;
+    margin-bottom: 15px;
 }
 
-header p {
+h1 {
+    color: #269aca;
+    font-size: 45px;
+    margin: 0;
+}
+
+p {
     color: #527080;
     font-size: 18px;
 }
 
 button {
-    border: 0;
+    border: none;
     background: #38a9df;
     color: white;
-    padding: 14px 28px;
-    border-radius: 30px;
-    font-size: 17px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: white;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 3px 15px #b8d9e5;
-}
-
-nav a {
-    color: #248dbb;
-    text-decoration: none;
+    padding: 16px 38px;
+    border-radius: 40px;
+    font-size: 18px;
     font-weight: bold;
-    margin: 0 10px;
-}
-
-section {
-    padding: 50px 20px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.title {
-    text-align: center;
-    color: #269aca;
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 20px #cde5ee;
-}
-
-.card h3 {
-    color: #269aca;
-}
-
-/* GALERI */
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-.photo {
-    background: white;
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px #cde5ee;
-    overflow: hidden;
-}
-
-.photo img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px;
+    margin-top: 25px;
     cursor: pointer;
-    display: block;
+    box-shadow: 0 8px 20px #b8d9e5;
     transition: 0.3s;
 }
 
-.photo img:hover {
-    transform: scale(1.03);
+button:hover {
+    transform: scale(1.05);
 }
 
-/* FULLSCREEN */
-
-#viewer {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    inset: 0;
-    background: rgba(0,0,0,.92);
-    justify-content: center;
-    align-items: center;
-}
-
-#viewer img {
-    max-width: 95%;
-    max-height: 90%;
-    border-radius: 15px;
-}
-
-#close {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    color: white;
-    font-size: 45px;
-    cursor: pointer;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #dff6ff;
-    color: #39758e;
-}
-
-@media(max-width:600px) {
-    header h1 {
-        font-size: 32px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 5px;
-        font-size: 14px;
-    }
-
-    .gallery {
-        grid-template-columns: 1fr;
-    }
+.small {
+    margin-top: 35px;
+    font-size: 14px;
+    color: #78909c;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>WELCOME TO CLASS X.5</h1>
-    <p>Kenangan, cerita, dan kebersamaan Class X.5 📸</p>
+<div class="container">
 
-<button onclick="window.location.href='main.html'">
-    ✨ MASUK
-</button>
-</header>
+    <div class="logo">💙</div>
 
-<nav>
-    <a href="#profil">🏠 Profil</a>
-    <a href="#struktur">👥 Struktur</a>
-    <a href="#jadwal">📚 Jadwal</a>
-    <a href="#galeri">📸 Galeri</a>
-</nav>
+    <h1>WELCOME TO<br>CLASS X.5</h1>
 
-<section id="profil">
+    <p>
+        Kenangan, cerita, jadwal,<br>
+        dan kebersamaan Class X.5 📸
+    </p>
 
-<h2 class="title">🏠 PROFIL CLASS X.5</h2>
+    <button onclick="window.location.href='main.html'">
+        ✨ MASUK
+    </button>
 
-<div class="card">
-    <h3>👩‍🏫 Wali Kelas</h3>
-    <p>Tri Nurkhayati</p>
-</div>
-
-</section>
-
-<section id="struktur">
-
-<h2 class="title">👥 STRUKTUR KELAS</h2>
-
-<div class="card">
-
-<h3>Ketua Kelas</h3>
-<p>Alfatah Ramadhan Bintang M</p>
-
-<h3>Wakil Ketua Kelas</h3>
-<p>Ayunda Riana Salsabila</p>
-
-<h3>Bendahara</h3>
-<p>1. Silva Khusnaini</p>
-<p>2. Elysa Devita Sari</p>
-
-<h3>Sekretaris</h3>
-<p>1. Silvi Khusnaini</p>
-<p>2. Aulia Khunaifah Alfajri</p>
-
-<h3>Seksi Keamanan</h3>
-<p>1. Bagas praditya</p>
-<p>2. Fauzan Adhima Alfath</p>
-
-<h3>Seksi Keagamaan</h3>
-<p>1. Caryn Calista Candice</p>
-<p>2. Adinda Nur Fadilah</p>
-
-<h3>Seksi Kebersihan</h3>
-<p>1. Aisyla Noviana</p>
-<p>2. Septiana Budiarti</p>
+    <div class="small">
+        SMA • CLASS X.5 • 2026
+    </div>
 
 </div>
-
-</section>
-
-<section id="jadwal">
-
-<h2 class="title">📚 JADWAL PELAJARAN</h2>
-
-<div class="card">
-
-<h3>Senin</h3>
-<p>Geografi - Bu Asih</p>
-<p>PAI - Pak Hanif</p>
-<p>Kimia - Pak Husni</p>
-<p>B. Indonesia - Bu Sigit</p>
-<p>Penjaskes - Pak Reza</p>
-
-<h3>Selasa</h3>
-<p>Seni - Bu Sukini</p>
-<p>Matematika - Bu Ratna</p>
-<p>B. Inggris - Mrs. Syifa</p>
-<p>PAI - Pak Hanif</p>
-<p>Biologi - Pak Rifai</p>
-<p>Fisika - Pak Sukaryadi</p>
-
-<h3>Rabu</h3>
-<p>Kimia</p>
-<p>Sosiologi - Bu Siti Sarofah</p>
-<p>B. Indonesia - Bu Sri Maryati</p>
-<p>Geografi</p>
-<p>Ekonomi</p>
-
-<h3>Kamis</h3>
-<p>PPKn - Bu Lupi</p>
-<p>B. Inggris</p>
-<p>Matematika</p>
-<p>Sosiologi</p>
-<p>Ekonomi</p>
-<p>B. Jawa - Bu Linda</p>
-
-<h3>Jumat</h3>
-<p>Informatika - Bu Lupi</p>
-<p>Biologi</p>
-<p>B. Indonesia - Bu Sri Maryati</p>
-<p>Ekstra</p>
-
-</div>
-
-</section>
-
-<section id="galeri">
-
-<h2 class="title">📸 GALERI KENANGAN</h2>
-
-<div class="gallery" id="gallery">
-    <p>📸 Memuat foto...</p>
-</div>
-
-</section>
-
-<div id="viewer" onclick="closePhoto()">
-    <span id="close">×</span>
-    <img id="bigPhoto">
-</div>
-
-<footer>
-    <p>💙 CLASS X.5 💙</p>
-    <p>tumbuh bersama semuanya 🌷.</p>
-</footer>
-
-<script>
-
-function openPhoto(src) {
-    document.getElementById("viewer").style.display = "flex";
-    document.getElementById("bigPhoto").src = src;
-}
-
-function closePhoto() {
-    document.getElementById("viewer").style.display = "none";
-}
-
-
-/* ==================================
-   OTOMATIS MENGAMBIL FOTO DARI GITHUB
-   ================================== */
-
-async function loadPhotos() {
-
-    const gallery = document.getElementById("gallery");
-
-    try {
-
-        const response = await fetch(
-            "https://api.github.com/repos/atah28511-dev/class-x5/contents/foto"
-        );
-
-        const files = await response.json();
-
-        gallery.innerHTML = "";
-
-        files.forEach(file => {
-
-            const name = file.name.toLowerCase();
-
-            if (
-                name.endsWith(".jpg") ||
-                name.endsWith(".jpeg") ||
-                name.endsWith(".png") ||
-                name.endsWith(".webp")
-            ) {
-
-                const div = document.createElement("div");
-
-                div.className = "photo";
-
-                div.innerHTML = `
-                    <img
-                        src="${file.download_url}"
-                        alt="Kenangan Class X.5"
-                        onclick="openPhoto(this.src)"
-                    >
-                `;
-
-                gallery.appendChild(div);
-            }
-
-        });
-
-    } catch (error) {
-
-        gallery.innerHTML =
-            "<p>❌ Foto gagal dimuat.</p>";
-
-    }
-}
-
-loadPhotos();
-
-</script>
 
 </body>
 </html>
