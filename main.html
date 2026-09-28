@@ -7,7 +7,6 @@
 <title>Class X.5</title>
 
 <style>
-
 * {
     box-sizing: border-box;
 }
@@ -19,7 +18,7 @@ html {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #e8f8ff, white);
+    background: linear-gradient(135deg, #e8f8ff, #ffffff);
     color: #234;
 }
 
@@ -28,25 +27,26 @@ body {
 header {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(135deg, #dff6ff, white);
+    background: linear-gradient(135deg, #dff6ff, #ffffff);
 }
 
 header h1 {
     color: #38a9df;
-    font-size: 38px;
+    font-size: 40px;
     margin: 0 0 10px;
 }
 
 header p {
     color: #527080;
+    font-size: 17px;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 20;
     background: white;
     padding: 14px 10px;
     text-align: center;
@@ -80,7 +80,7 @@ section {
 
 .card {
     background: white;
-    padding: 22px;
+    padding: 24px;
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 0 5px 20px #cde5ee;
@@ -102,7 +102,7 @@ section {
     box-shadow: 0 4px 15px #cde5ee;
 }
 
-.day button {
+.day-button {
     width: 100%;
     border: none;
     background: white;
@@ -114,7 +114,7 @@ section {
     cursor: pointer;
 }
 
-.day button:hover {
+.day-button:hover {
     background: #eefaff;
 }
 
@@ -141,7 +141,7 @@ section {
 .time {
     color: #248dbb;
     font-weight: bold;
-    min-width: 110px;
+    min-width: 120px;
 }
 
 .subject {
@@ -153,7 +153,7 @@ section {
 
 .break {
     background: #fff4d6;
-    color: #a66a00;
+    color: #a56a00;
     padding: 14px;
     margin-top: 10px;
     border-radius: 12px;
@@ -164,13 +164,13 @@ section {
 .break span {
     display: block;
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 4px;
 }
 
 /* LITERASI */
 
 .literacy {
-    background: #e9f8e9;
+    background: #e9f8ec;
     color: #368044;
     padding: 14px;
     margin-top: 10px;
@@ -182,7 +182,7 @@ section {
 .literacy span {
     display: block;
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 4px;
 }
 
 /* =========================
@@ -225,7 +225,14 @@ section {
     border-radius: 15px;
     cursor: pointer;
     display: block;
+    transition: 0.3s;
 }
+
+.photo img:hover {
+    transform: scale(1.03);
+}
+
+/* TOMBOL GESER */
 
 .slide-btn {
     position: absolute;
@@ -236,9 +243,9 @@ section {
     border-radius: 50%;
     background: #38a9df;
     color: white;
-    font-size: 25px;
+    font-size: 28px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 5;
 }
 
 .left {
@@ -249,7 +256,7 @@ section {
     right: 5px;
 }
 
-/* FOTO BESAR */
+/* FULLSCREEN FOTO */
 
 #viewer {
     display: none;
@@ -320,10 +327,9 @@ footer {
     .slide-btn {
         width: 38px;
         height: 38px;
-        font-size: 20px;
+        font-size: 22px;
     }
 }
-
 </style>
 </head>
 
@@ -331,22 +337,22 @@ footer {
 
 <header>
 
-    <h1>CLASS X.5 💙</h1>
+<h1>CLASS X.5 💙</h1>
 
-    <p>
-        Tumbuh bersama, belajar bersama,
-        dan membuat kenangan bersama.
-    </p>
+<p>
+Tumbuh bersama, belajar bersama,
+dan membuat kenangan bersama.
+</p>
 
 </header>
 
 
 <nav>
 
-    <a href="#profil">🏠 Profil</a>
-    <a href="#struktur">👥 Struktur</a>
-    <a href="#jadwal">📚 Jadwal</a>
-    <a href="#galeri">📸 Galeri</a>
+<a href="#profil">🏠 Profil</a>
+<a href="#struktur">👥 Struktur</a>
+<a href="#jadwal">📚 Jadwal</a>
+<a href="#galeri">📸 Galeri</a>
 
 </nav>
 
@@ -361,9 +367,9 @@ footer {
 
 <div class="card">
 
-    <h3>👩‍🏫 Wali Kelas</h3>
+<h3>👩‍🏫 Wali Kelas</h3>
 
-    <p>Tri Nurkhayati</p>
+<p>Tri Nurkhayati</p>
 
 </div>
 
@@ -424,7 +430,7 @@ footer {
 
 <div class="day">
 
-<button onclick="toggleDay('senin')">
+<button class="day-button" onclick="toggleDay('senin')">
 📅 Senin ▼
 </button>
 
@@ -456,18 +462,48 @@ footer {
 </div>
 
 <div class="lesson">
-<span class="time">09.50 - 10.40</span>
+<span class="time">09.50 - 10.35</span>
 <span class="subject">B. Indonesia - Bu Sigit</span>
 </div>
 
 <div class="lesson">
-<span class="time">10.40 - 11.50</span>
+<span class="time">10.35 - 11.20</span>
 <span class="subject">Penjaskes - Pak Reza</span>
+</div>
+
+<div class="lesson">
+<span class="time">11.20 - 11.50</span>
+<span class="subject">Penjaskes</span>
 </div>
 
 <div class="break">
 🍱 ISTIRAHAT 2
 <span>11.50 - 12.40</span>
+</div>
+
+<div class="lesson">
+<span class="time">12.40 - 13.25</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">13.25 - 14.10</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">14.10 - 14.55</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">14.55 - 15.15</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="break">
+🌤️ ISTIRAHAT TERAKHIR
+<span>15.15 - 15.30</span>
 </div>
 
 </div>
@@ -478,7 +514,7 @@ footer {
 
 <div class="day">
 
-<button onclick="toggleDay('selasa')">
+<button class="day-button" onclick="toggleDay('selasa')">
 📅 Selasa ▼
 </button>
 
@@ -490,8 +526,13 @@ footer {
 </div>
 
 <div class="lesson">
-<span class="time">07.45 - 08.55</span>
+<span class="time">07.45 - 08.20</span>
 <span class="subject">Matematika - Bu Ratna</span>
+</div>
+
+<div class="lesson">
+<span class="time">08.20 - 08.55</span>
+<span class="subject">B. Inggris - Mrs. Syifa</span>
 </div>
 
 <div class="break">
@@ -501,22 +542,27 @@ footer {
 
 <div class="literacy">
 📖 LITERASI
-<span>09.15 - 09.25</span>
+<span>09.40 - 09.50</span>
 </div>
 
 <div class="lesson">
-<span class="time">09.25 - 10.15</span>
-<span class="subject">B. Inggris - Mrs. Syifa</span>
-</div>
-
-<div class="lesson">
-<span class="time">10.15 - 11.00</span>
+<span class="time">09.15 - 10.00</span>
 <span class="subject">PAI - Pak Hanif</span>
 </div>
 
 <div class="lesson">
-<span class="time">11.00 - 11.50</span>
+<span class="time">10.00 - 10.45</span>
 <span class="subject">Biologi - Pak Rifai</span>
+</div>
+
+<div class="lesson">
+<span class="time">10.45 - 11.30</span>
+<span class="subject">Fisika - Pak Sukaryadi</span>
+</div>
+
+<div class="lesson">
+<span class="time">11.30 - 11.50</span>
+<span class="subject">Fisika</span>
 </div>
 
 <div class="break">
@@ -526,7 +572,27 @@ footer {
 
 <div class="lesson">
 <span class="time">12.40 - 13.25</span>
-<span class="subject">Fisika - Pak Sukaryadi</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">13.25 - 14.10</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">14.10 - 14.55</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">14.55 - 15.15</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="break">
+🌤️ ISTIRAHAT TERAKHIR
+<span>15.15 - 15.30</span>
 </div>
 
 </div>
@@ -537,19 +603,19 @@ footer {
 
 <div class="day">
 
-<button onclick="toggleDay('rabu')">
+<button class="day-button" onclick="toggleDay('rabu')">
 📅 Rabu ▼
 </button>
 
 <div id="rabu" class="schedule">
 
 <div class="lesson">
-<span class="time">07.00 - 07.50</span>
+<span class="time">07.00 - 07.45</span>
 <span class="subject">Kimia</span>
 </div>
 
 <div class="lesson">
-<span class="time">07.50 - 08.40</span>
+<span class="time">07.45 - 08.40</span>
 <span class="subject">Sosiologi - Bu Siti Sarofah</span>
 </div>
 
@@ -564,18 +630,48 @@ footer {
 </div>
 
 <div class="lesson">
-<span class="time">09.50 - 10.40</span>
+<span class="time">09.50 - 10.35</span>
 <span class="subject">Geografi</span>
 </div>
 
 <div class="lesson">
-<span class="time">10.40 - 11.50</span>
+<span class="time">10.35 - 11.20</span>
+<span class="subject">Ekonomi</span>
+</div>
+
+<div class="lesson">
+<span class="time">11.20 - 11.50</span>
 <span class="subject">Ekonomi</span>
 </div>
 
 <div class="break">
 🍱 ISTIRAHAT 2
 <span>11.50 - 12.40</span>
+</div>
+
+<div class="lesson">
+<span class="time">12.40 - 13.25</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">13.25 - 14.10</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">14.10 - 14.55</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">14.55 - 15.15</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="break">
+🌤️ ISTIRAHAT TERAKHIR
+<span>15.15 - 15.30</span>
 </div>
 
 </div>
@@ -586,7 +682,7 @@ footer {
 
 <div class="day">
 
-<button onclick="toggleDay('kamis')">
+<button class="day-button" onclick="toggleDay('kamis')">
 📅 Kamis ▼
 </button>
 
@@ -598,8 +694,13 @@ footer {
 </div>
 
 <div class="lesson">
-<span class="time">07.45 - 08.55</span>
+<span class="time">07.45 - 08.20</span>
 <span class="subject">B. Inggris</span>
+</div>
+
+<div class="lesson">
+<span class="time">08.20 - 08.55</span>
+<span class="subject">Matematika</span>
 </div>
 
 <div class="break">
@@ -609,17 +710,27 @@ footer {
 
 <div class="literacy">
 📖 LITERASI
-<span>09.15 - 09.25</span>
+<span>09.40 - 09.50</span>
 </div>
 
 <div class="lesson">
-<span class="time">09.25 - 10.15</span>
-<span class="subject">Matematika</span>
-</div>
-
-<div class="lesson">
-<span class="time">10.15 - 11.50</span>
+<span class="time">09.15 - 10.00</span>
 <span class="subject">Sosiologi</span>
+</div>
+
+<div class="lesson">
+<span class="time">10.00 - 10.45</span>
+<span class="subject">Ekonomi</span>
+</div>
+
+<div class="lesson">
+<span class="time">10.45 - 11.30</span>
+<span class="subject">B. Jawa - Bu Linda</span>
+</div>
+
+<div class="lesson">
+<span class="time">11.30 - 11.50</span>
+<span class="subject">B. Jawa</span>
 </div>
 
 <div class="break">
@@ -629,12 +740,27 @@ footer {
 
 <div class="lesson">
 <span class="time">12.40 - 13.25</span>
-<span class="subject">Ekonomi</span>
+<span class="subject">Pelajaran</span>
 </div>
 
 <div class="lesson">
 <span class="time">13.25 - 14.10</span>
-<span class="subject">B. Jawa - Bu Linda</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">14.10 - 14.55</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">14.55 - 15.15</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="break">
+🌤️ ISTIRAHAT TERAKHIR
+<span>15.15 - 15.30</span>
 </div>
 
 </div>
@@ -645,7 +771,7 @@ footer {
 
 <div class="day">
 
-<button onclick="toggleDay('jumat')">
+<button class="day-button" onclick="toggleDay('jumat')">
 📅 Jumat ▼
 </button>
 
@@ -657,8 +783,13 @@ footer {
 </div>
 
 <div class="lesson">
-<span class="time">07.45 - 08.55</span>
+<span class="time">07.45 - 08.20</span>
 <span class="subject">Biologi</span>
+</div>
+
+<div class="lesson">
+<span class="time">08.20 - 08.55</span>
+<span class="subject">B. Indonesia - Bu Sri Maryati</span>
 </div>
 
 <div class="break">
@@ -668,22 +799,57 @@ footer {
 
 <div class="literacy">
 📖 LITERASI
-<span>09.15 - 09.25</span>
+<span>09.40 - 09.50</span>
 </div>
 
 <div class="lesson">
-<span class="time">09.25 - 10.15</span>
-<span class="subject">B. Indonesia - Bu Sri Maryati</span>
-</div>
-
-<div class="lesson">
-<span class="time">10.15 - 11.50</span>
+<span class="time">09.15 - 10.00</span>
 <span class="subject">Ekstra</span>
+</div>
+
+<div class="lesson">
+<span class="time">10.00 - 10.45</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">10.45 - 11.30</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">11.30 - 11.50</span>
+<span class="subject">Pelajaran</span>
 </div>
 
 <div class="break">
 🍱 ISTIRAHAT 2
 <span>11.50 - 12.40</span>
+</div>
+
+<div class="lesson">
+<span class="time">12.40 - 13.25</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">13.25 - 14.10</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">14.10 - 14.55</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="lesson">
+<span class="time">14.55 - 15.15</span>
+<span class="subject">Pelajaran</span>
+</div>
+
+<div class="break">
+🌤️ ISTIRAHAT TERAKHIR
+<span>15.15 - 15.30</span>
 </div>
 
 </div>
@@ -708,7 +874,15 @@ footer {
 
 <div class="gallery" id="gallery">
 
-<p>📸 Memuat foto...</p>
+<div class="photo">
+
+<img
+src="foto/IMG-20260727-WA0022.jpg"
+alt="Kenangan Class X.5"
+onclick="openPhoto(this.src)"
+>
+
+</div>
 
 </div>
 
@@ -744,7 +918,7 @@ footer {
 <script>
 
 /* =========================
-   JADWAL
+   BUKA / TUTUP JADWAL
 ========================= */
 
 function toggleDay(id) {
@@ -768,6 +942,7 @@ function openPhoto(src) {
 
 }
 
+
 function closePhoto() {
 
     document.getElementById("viewer").style.display = "none";
@@ -776,7 +951,7 @@ function closePhoto() {
 
 
 /* =========================
-   GESER GALERI
+   GALERI GESER
 ========================= */
 
 function slideGallery(direction) {
@@ -792,72 +967,6 @@ function slideGallery(direction) {
     });
 
 }
-
-
-/* =========================
-   AMBIL FOTO DARI GITHUB
-========================= */
-
-async function loadPhotos() {
-
-    const gallery = document.getElementById("gallery");
-
-    try {
-
-        const response = await fetch(
-            "https://api.github.com/repos/atah28511-dev/class-x5/contents/foto"
-        );
-
-        const files = await response.json();
-
-        gallery.innerHTML = "";
-
-        files.forEach(file => {
-
-            const name = file.name.toLowerCase();
-
-            if (
-                name.endsWith(".jpg") ||
-                name.endsWith(".jpeg") ||
-                name.endsWith(".png") ||
-                name.endsWith(".webp")
-            ) {
-
-                const div = document.createElement("div");
-
-                div.className = "photo";
-
-                div.innerHTML = `
-                    <img
-                        src="${file.download_url}"
-                        alt="Kenangan Class X.5"
-                        onclick="openPhoto(this.src)"
-                    >
-                `;
-
-                gallery.appendChild(div);
-
-            }
-
-        });
-
-        if (gallery.innerHTML === "") {
-
-            gallery.innerHTML =
-                "<p>📸 Belum ada foto.</p>";
-
-        }
-
-    } catch(error) {
-
-        gallery.innerHTML =
-            "<p>❌ Foto gagal dimuat.</p>";
-
-    }
-
-}
-
-loadPhotos();
 
 </script>
 
